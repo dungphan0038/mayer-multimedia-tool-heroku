@@ -1,6 +1,13 @@
 const express = require('express');
 const fetch = require('node-fetch');
+const cors = require('cors'); // Thêm thư viện cors
+
 const app = express();
+
+// Sử dụng middleware CORS để cho phép tất cả origin (hoặc chỉ định Netlify)
+app.use(cors()); // Cho phép tất cả origin
+// Nếu muốn chỉ định Netlify, dùng:
+// app.use(cors({ origin: 'https://mayer-multimedia-tool.netlify.app' }));
 
 app.use(express.json());
 
