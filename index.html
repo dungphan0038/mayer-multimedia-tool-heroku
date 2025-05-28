@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayer's Multimedia Design Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MAYER'S MULTIMEDIA DESIGN TOOL</h1>
+        <h2>I. Provide Your Project Details</h2>
+        <form id="project-form">
+            <!-- Project Type -->
+            <label>1. Project Type (select all that apply):</label>
+            <p class="description">Select the type(s) of your multimedia project. This helps identify the format of your content, such as an online course, video, or app. Choose "Other" to specify a custom type if needed.</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="project-type" value="e-learning"> E-learning</label>
+                <label><input type="checkbox" name="project-type" value="presentation"> Presentation</label>
+                <label><input type="checkbox" name="project-type" value="video"> Video</label>
+                <label><input type="checkbox" name="project-type" value="interactive-app"> Interactive App</label>
+                <label><input type="checkbox" name="project-type" value="website"> Website</label>
+                <label>
+                    <input type="checkbox" name="project-type" value="other"> Other
+                    <input type="text" id="project-type-other" name="project-type-other" disabled title="Specify other project type">
+                </label>
+            </div>
+
+            <!-- Target Audience -->
+            <label>2. Target Audience (select all that apply):</label>
+            <p class="description">Choose the audience(s) for your project. This defines who will use or view your content, such as students or professionals. Select "Other" to specify a unique audience.</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="audience" value="children"> Children (under 13)</label>
+                <label><input type="checkbox" name="audience" value="students"> Students (13-18)</label>
+                <label><input type="checkbox" name="audience" value="university-students"> University Students</label>
+                <label><input type="checkbox" name="audience" value="professionals"> Professionals</label>
+                <label><input type="checkbox" name="audience" value="general-public"> General Public</label>
+                <label>
+                    <input type="checkbox" name="audience" value="other"> Other
+                    <input type="text" id="audience-other" name="audience-other" disabled title="Specify other audience">
+                </label>
+            </div>
+
+            <!-- Design Goal -->
+            <label>3. Design Goal (select all that apply):</label>
+            <p class="description">Select the goal(s) of your project. This indicates the purpose, such as informing, educating, or engaging users. Choose "Other" to specify a custom goal.</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="goal" value="inform"> Inform</label>
+                <label><input type="checkbox" name="goal" value="educate"> Educate</label>
+                <label><input type="checkbox" name="goal" value="engage"> Engage</label>
+                <label><input type="checkbox" name="goal" value="entertain"> Entertain</label>
+                <label>
+                    <input type="checkbox" name="goal" value="other"> Other
+                    <input type="text" id="goal-other" name="goal-other" disabled title="Specify other goal">
+                </label>
+            </div>
+
+            <!-- Prior Knowledge Level -->
+            <label>4. Prior Knowledge Level (select all that apply):</label>
+            <p class="description">Choose the prior knowledge level(s) of your audience. This indicates their familiarity with the topic, from beginner to expert, to tailor the content appropriately.</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="prior-knowledge" value="beginner"> Beginner</label>
+                <label><input type="checkbox" name="prior-knowledge" value="intermediate"> Intermediate</label>
+                <label><input type="checkbox" name="prior-knowledge" value="advanced"> Advanced</label>
+                <label><input type="checkbox" name="prior-knowledge" value="expert"> Expert</label>
+            </div>
+
+            <!-- Content Medium -->
+            <label>5. Content Medium (select all that apply):</label>
+            <p class="description">Select the media type(s) used in your project, such as text, images, or video. This defines the content elements. Choose "Other" to specify a unique medium.</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="content-medium" value="text"> Text</label>
+                <label><input type="checkbox" name="content-medium" value="images"> Images</label>
+                <label><input type="checkbox" name="content-medium" value="audio"> Audio</label>
+                <label><input type="checkbox" name="content-medium" value="video"> Video</label>
+                <label><input type="checkbox" name="content-medium" value="animation"> Animation</label>
+                <label><input type="checkbox" name="content-medium" value="interactive-elements"> Interactive Elements</label>
+                <label>
+                    <input type="checkbox" name="content-medium" value="other"> Other
+                    <input type="text" id="content-medium-other" name="content-medium-other" disabled title="Specify other medium">
+                </label>
+            </div>
+
+            <!-- Time Constraint -->
+            <label>6. Time Constraint (select all that apply):</label>
+            <p class="description">Select the duration(s) of your content, such as short or long segments. This helps structure the content. Choose "Other" to specify a custom duration.</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="time-constraint" value="short"> Short (<5 minutes)</label>
+                <label><input type="checkbox" name="time-constraint" value="medium"> Medium (5-15 minutes)</label>
+                <label><input type="checkbox" name="time-constraint" value="long"> Long (>15 minutes)</label>
+                <label><input type="checkbox" name="time-constraint" value="not-applicable"> Not applicable</label>
+                <label>
+                    <input type="checkbox" name="time-constraint" value="other"> Other
+                    <input type="text" id="time-constraint-other" name="time-constraint-other" disabled title="Specify other time constraint">
+                </label>
+            </div>
+
+            <!-- Interaction Level -->
+            <label>7. Interaction Level (select all that apply):</label>
+            <p class="description">Choose the interaction level(s) of your project, such as passive viewing or active quizzes. This defines user engagement. Select "Other" for a custom interaction.</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="interaction-level" value="passive"> Passive (e.g., watching or reading)</label>
+                <label><input type="checkbox" name="interaction-level" value="moderate"> Moderate (e.g., simple clicking)</label>
+                <label><input type="checkbox" name="interaction-level" value="active"> Active (e.g., simulations, quizzes)</label>
+                <label>
+                    <input type="checkbox" name="interaction-level" value="other"> Other
+                    <input type="text" id="interaction-level-other" name="interaction-level-other" disabled title="Specify other interaction level">
+                </label>
+            </div>
+
+            <!-- Project Description -->
+            <label for="description">8. Project Description:</label>
+            <p class="description">Describe your project in detail (max 500 characters). Include specific goals, content, or context to help generate accurate design recommendations.</p>
+            <textarea id="description" name="description" rows="5" maxlength="500" placeholder="Describe your project briefly (max 500 characters)..." required></textarea>
+
+            <button type="submit">Get Design Principles</button>
+        </form>
+        <h2>II. Design Principles Recommendations</h2>
+        <div id="result">
+            <p class="result-placeholder">Your recommended design principles will appear here after you click "Get Design Principles".</p>
+        </div>
+
+        <div class="button-group">
+            <button id="copy-btn" class="hidden">Copy Results</button>
+            <button id="refresh-btn" class="hidden">Start Over</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>A mini project designed by <a href="https://sites.google.com/view/dungphanidportfolio" target="_blank">Dũng Phan</a>.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
